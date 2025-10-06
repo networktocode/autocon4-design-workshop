@@ -1,5 +1,4 @@
-# 03.Connect to your dev machine
-#### [Open guide in Scribe](https://scribehow.com/shared/03Connect_to_your_dev_machine__o2PxP4BmTLOfc-gi_vGJhA)
+# Connect to your dev machine
 
 
 1\. Navigate to [https://portal.qtorque.io/login](https://portal.qtorque.io/login)
