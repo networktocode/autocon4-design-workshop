@@ -199,6 +199,6 @@ dynamic_groups:
     filter: {"location": ["{{ site_name }}"]} 
 
 containerlab_topologies:
-  - "!create_or_update:name": "{{ site_name }}"
+  - "!create_or_update:name": "{{ deployment_name }}"
     description: "Containerlab topology for {{ site_name }}"
     dynamic_group__name: "{{ site_name }}"

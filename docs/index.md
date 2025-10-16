@@ -1,4 +1,4 @@
-# Lab Guide
+# AC4 : WSB2 - Lab Guide
 
 [Connect to your dev machine](./_connect_to_your_dev_machine.md)
 
@@ -19,8 +19,6 @@
 
 [11. Deploy a New Branch](./11.deploy_a_new_branch.md)
 
-[12. Conclusion](./12.conclusion.md)
-
 
 ## Lab 2: Create a digital-twin with containerlab
 [20. Intro to containerlab](./20.intro_to_containerlab.md)
@@ -29,13 +27,11 @@
 
 [22. Deploy containerlab topology](./22.deploy_containerlab_topology.md)
 
-[23. Conclusion](./23.conclusion.md)
 
+## Lab 3: Test your network with NUTS
+[30. Introduction to NUTS in CLI](./30.introduction_to_nuts.md)
 
-## Lab 3: Test you network with NUTS
-[30. Introduction to NUTS](./30.introduction_to_nuts.md)
-
-[31. Run NUTS tests pt.1](./31.run_nuts_tests_pt.1.md)
+[31. Run NUTS tests via Nautobot Job pt.1](./31.run_nuts_tests_pt.1.md)
 
 
 ## Lab 4: Manage configurations with Golden Config
@@ -45,17 +41,11 @@
 
 [42. Fun with config compliance and remediation pt.1](./42.fun_with_config_compliance_and_remediation_pt.1.md)
 
-[43. Run NUTS tests pt.2](./43.run_nuts_tests_pt.2.md)
+[43. Run NUTS tests via Nautobot Job pt.2](./43.run_nuts_tests_pt.2.md)
 
 [44. Amend the config templates pt.2](./44.amend_the_config_templates_pt.2.md)
 
 [45. Fun with config compliance and remediation pt.2](./45.fun_with_config_compliance_and_remediation_pt.2.md)
 
-[46. Run NUTS tests pt.3](./46.run_nuts_tests_pt.3.md)
-
-[47. Amend the config templates pt.3](./47.amend_the_config_templates_pt.3.md)
-
-[48. Fun with config compliance and remediation pt.3](./48.fun_with_config_compliance_and_remediation_pt.3.md)
-
-[49. Run NUTS tests pt.4](./49.run_nuts_tests_pt.4.md)
+[46. Run NUTS tests via Nautobot Job pt.3](./46.run_nuts_tests_pt.3.md)
 
