@@ -1,4 +1,5 @@
 """Basic design demonstrates the capabilities of the Design Builder."""
+
 from nautobot.apps.jobs import register_jobs, StringVar, IPNetworkVar, ObjectVar
 
 from nautobot.dcim.models import Location
@@ -9,7 +10,8 @@ from nautobot_design_builder.design_job import DesignJob
 
 from .context import BaseDataContext, BranchDesignContext
 
-name = "AUTOCON3"
+name = "AUTOCON4"
+
 
 class BaseData(DesignJob):
     """Load base data."""
@@ -23,6 +25,7 @@ class BaseData(DesignJob):
         has_sensitive_variables = False
         design_file = "designs/0000_basedata.yaml.j2"
         context_class = BaseDataContext
+
 
 class BranchDesign(DesignJob):
     """A basic design for design builder."""
@@ -48,5 +51,6 @@ class BranchDesign(DesignJob):
         extensions = [ext.CableConnectionExtension, ext.NextPrefixExtension]
         design_file = "designs/0001_branchdesign.yaml.j2"
         context_class = BranchDesignContext
+
 
 register_jobs(BaseData, BranchDesign)

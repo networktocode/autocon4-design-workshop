@@ -15,16 +15,19 @@ from nautobot.ipam.models import IPAddress
 
 from containerlab.models import Topology
 
-name = "AUTOCON3"  # pylint: disable=invalid-name
+name = "AUTOCON4"  # pylint: disable=invalid-name
 
-def generate_test_file(template_filename: str, output_filename: str, topology: Topology, **kwargs):
+
+def generate_test_file(
+    template_filename: str, output_filename: str, topology: Topology, **kwargs
+):
     """Generate a test file from a Jinja2 template."""
     pwd = Path(__file__).parent
     template_path = pwd / "templates"
     env = Environment(
-    loader=FileSystemLoader(template_path),
-    trim_blocks=True,
-    lstrip_blocks=True,
+        loader=FileSystemLoader(template_path),
+        trim_blocks=True,
+        lstrip_blocks=True,
     )
     template = env.get_template(template_filename)
     output = template.render(topology=topology, **kwargs)
@@ -32,6 +35,7 @@ def generate_test_file(template_filename: str, output_filename: str, topology: T
     if output_path.exists():
         output_path.unlink()
     output_path.write_text(output)
+
 
 class NutJob(Job):
     """A job to run NUTS tests."""
@@ -58,7 +62,7 @@ class NutJob(Job):
             self.logger.error("No devices found in the topology.")
             return {}
         nodes = [device.name for device in devices]
-        
+
         generate_test_file(
             template_filename="hosts.yaml.j2",
             output_filename="/source/inventory/hosts.yaml",
@@ -81,11 +85,14 @@ class NutJob(Job):
         )
 
         device_peers = []
-        role = Role.objects.get(name='Branch:L3Link')
+        role = Role.objects.get(name="Branch:L3Link")
         for device in devices:
             for interface in Interface.objects.filter(device=device, role=role):
                 device_peers.append(
-                    (device.name, interface.ip_addresses.first().siblings().first().host)
+                    (
+                        device.name,
+                        interface.ip_addresses.first().siblings().first().host,
+                    )
                 )
         generate_test_file(
             template_filename="test_ping_connected.yaml.j2",
@@ -95,13 +102,13 @@ class NutJob(Job):
         )
 
         device_remoteloopbacks = []
-        role = Role.objects.get(name='Branch:Loopback')
+        role = Role.objects.get(name="Branch:Loopback")
         for device in devices:
             loopback_interface = Interface.objects.get(device=device, role=role)
-            remoteloopbacks = [rl.host for rl in loopback_interface.ip_addresses.first().siblings()]
-            device_remoteloopbacks.append(
-                (device.name, remoteloopbacks)
-            )
+            remoteloopbacks = [
+                rl.host for rl in loopback_interface.ip_addresses.first().siblings()
+            ]
+            device_remoteloopbacks.append((device.name, remoteloopbacks))
         generate_test_file(
             template_filename="test_ping_loopbacks.yaml.j2",
             output_filename="tests/test_ping_loopbacks.yaml",
@@ -160,7 +167,9 @@ class NutJob(Job):
             }
             for result in ["error", "failed", "passed"]:
                 report["result"][result] = [
-                    test.get("nodeid") for test in full_report.get("tests") if test.get("outcome") == result
+                    test.get("nodeid")
+                    for test in full_report.get("tests")
+                    if test.get("outcome") == result
                 ]
             return report
         self.logger.error("Report was not generated!")

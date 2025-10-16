@@ -15,47 +15,47 @@ locations:
     status__name: "Active"
     location_type__name: "Site"
     parent__name: "{{ region.name }}"
-    tenant__name: "Autocon3"
+    tenant__name: "Autocon4"
     prefixes:
       - "!create_or_update:prefix": "{{ branch_supernet }}"
         type: "container"
         role__name: "Branch:Supernet"
         status__name: "Active"
-        tenant__name: "Autocon3"
+        tenant__name: "Autocon4"
       - "!create_or_update:prefix": "{{ container_loopback }}"
         type: "pool"
         role__name: "Branch:Loopback"
         status__name: "Active"
-        tenant__name: "Autocon3"
+        tenant__name: "Autocon4"
       - "!create_or_update:prefix": "{{ container_l3link }}"
         type: "container"
         role__name: "Branch:L3Link"
         status__name: "Active"
-        tenant__name: "Autocon3"
+        tenant__name: "Autocon4"
       {% for link in range(4) %}
       - "!create_or_update:prefix": "{{ l3link[link] }}"
         type: "network"
         role__name: "Branch:L3Link"
         status__name: "Active"
-        tenant__name: "Autocon3"
+        tenant__name: "Autocon4"
       {% endfor %}
       - "!create_or_update:prefix": "{{ lan_data }}"
         description: "Data LAN"
         type: "network"
         role__name: "Branch:LAN"
         status__name: "Active"
-        tenant__name: "Autocon3"
+        tenant__name: "Autocon4"
       - "!create_or_update:prefix": "{{ lan_voice }}"
         description: "Voice LAN"
         type: "network"
         role__name: "Branch:LAN"
         status__name: "Active"
-        tenant__name: "Autocon3"
+        tenant__name: "Autocon4"
 
     racks:
       - "!create_or_update:name": "{{ site_name }}-rack1"
         status__name: "Active"
-        tenant__name: "Autocon3"
+        tenant__name: "Autocon4"
 
     devices:
     # ----- ROUTERS -----
@@ -65,7 +65,7 @@ locations:
         device_type__model: "Dummy"
         role__name: "Router"
         platform__name: "Arista EOS"
-        tenant__name: "Autocon3"
+        tenant__name: "Autocon4"
         rack__name: "{{ site_name }}-rack1"
         face: "front"
         position: "{{ rtr + 10 }}"
@@ -102,7 +102,7 @@ locations:
         device_type__model: "Dummy"
         role__name: "Switch"
         platform__name: "Arista EOS"
-        tenant__name: "Autocon3"
+        tenant__name: "Autocon4"
         rack__name: "{{ site_name }}-rack1"
         face: "front"
         position: "{{ sw + 20 }}"
@@ -136,7 +136,7 @@ ip_addresses:
   {% for ip in range(4) %}
     - "!create_or_update:address": "{{ container_loopback | network_offset('0.0.0.' ~ ip ~ '/32') }}"
       status__name: "Active"
-      tenant__name: "Autocon3"
+      tenant__name: "Autocon4"
       role__name: "Loopback"
       "!ref": "loopback-{{ ip }}"
   {% endfor %}
@@ -144,12 +144,12 @@ ip_addresses:
   {% for link in range(4) %}
     - "!create_or_update:address": "{{ l3link[link] | network_offset('0.0.0.1/30') }}"
       status__name: "Active"
-      tenant__name: "Autocon3"
+      tenant__name: "Autocon4"
       role__name: "Branch:L3Link"
       "!ref": "link-{{ link }}-rtr"
     - "!create_or_update:address": "{{ l3link[link] | network_offset('0.0.0.2/30') }}"
       status__name: "Active"
-      tenant__name: "Autocon3"
+      tenant__name: "Autocon4"
       role__name: "Branch:L3Link"
       "!ref": "link-{{ link }}-sw"
   {% endfor %}
@@ -181,7 +181,7 @@ circuits:
     status__name: "Active"
     provider__name: "NTC"
     circuit_type__name: "Ethernet"
-    tenant__name: "Autocon3"
+    tenant__name: "Autocon4"
     circuit_terminations:
       - "!create_or_update:term_side": "A"
         location__name: "{{ site_name }}"
@@ -192,13 +192,13 @@ circuits:
 dynamic_groups:
   - "!create_or_update:name": "{{ site_name }}"
     "description": "Dynamic Group for the devices in location {{ site_name }}"
-    tenant__name: "Autocon3"
+    tenant__name: "Autocon4"
     content_type:
       "!get:model": "device"
       "!get:app_label": "dcim"
     filter: {"location": ["{{ site_name }}"]} 
 
 containerlab_topologies:
-  - "!create_or_update:name": "{{ site_name }}"
+  - "!create_or_update:name": "{{ deployment_name }}"
     description: "Containerlab topology for {{ site_name }}"
     dynamic_group__name: "{{ site_name }}"
