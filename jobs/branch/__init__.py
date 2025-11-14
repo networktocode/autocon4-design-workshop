@@ -36,7 +36,7 @@ class BranchDesign(DesignJob):
         model=Location,
     )
 
-    site_name = StringVar(label="Site Name", regex=r"\w{3}\d+")
+    site_name = StringVar(label="Site Name")
 
     class Meta:
         """Metadata describing this design job."""

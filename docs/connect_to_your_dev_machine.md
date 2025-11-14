@@ -23,26 +23,28 @@
 
 5\. Once logged in, click "Operation Hub" on the left pane
 
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-23/3d48cc14-e021-454a-96c8-3410f783798f/ascreenshot.jpeg?tl_px=0,0&br_px=2752,1538&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=1&wat_gravity=northwest&wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=107,95)
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-19/83945263-12df-49b2-8718-cf9015de6e50/ascreenshot.jpeg?tl_px=0,0&br_px=3439,1922&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=35,97)
 
 
 6\. Click the name of your active pod, "ac4-workshop-podXX"
 
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-23/9bfdc1fc-3e27-4b03-8a70-e975e7bbe24c/ascreenshot.jpeg?tl_px=0,0&br_px=2752,1538&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=1&wat_gravity=northwest&wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=260,181)
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-19/464212c2-8493-46cc-9536-3a829b58a70f/ascreenshot.jpeg?tl_px=0,0&br_px=3439,1922&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=255,183)
 
 
-7\. Click "Quick Access"
+7\. Click "I/O" tab and look for the "Quick Access" section
 
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-23/985fa675-6645-4c37-adf9-946c3119d1f7/ascreenshot.jpeg?tl_px=90,0&br_px=2842,1538&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=1&wat_gravity=northwest&wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=866,131)
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-19/ccc3ba15-f70f-4f76-85e7-f3c35cfc7ce6/ascreenshot.jpeg?tl_px=922,0&br_px=4362,1922&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=806,160)
 
 
 8\. Click on the link for "Pod Desktop Environment"
 
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-23/79304c4d-bf0d-4c15-b83d-31c040e9c4de/ascreenshot.jpeg?tl_px=90,0&br_px=2842,1538&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=1&wat_gravity=northwest&wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=845,244)
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-19/a6050841-d10c-499d-83f8-e900d2010c84/ascreenshot.jpeg?tl_px=922,0&br_px=4362,1922&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=770,271)
 
 
 9\. You will be presented with a virtual desktop for your dev machine
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-05-23/e4e74369-f580-4549-87b0-95c58c46e00a/ascreenshot.jpeg?tl_px=0,0&br_px=2752,1538&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=1&wat_gravity=northwest&wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=156,159)
 
-[🏠 Home](index.md) | [Next ➡️](./00.generate_a_personal_access_token_(pat).md)
+10\. A popup might appear and ask you to allow access to your clipboard. Click "Allow".
+
+[🏠 Home](index.md) | [Next ➡️](./00.generate_a_personal_access_token_pat.md)
